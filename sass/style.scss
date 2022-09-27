@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0400;700;1,700&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #333333;
+
+  h1 {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+  }
+  h3 {
+    font-family: "Playfair Display", serif;
+    margin-top: 22px;
+  }
+  h4 {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-weight: 400;
+    margin-top: 20px;
+  }
+}
+
+.recipe-time {
+  background: #ffffff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  max-height: 400px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  .list-item {
+    padding: 10px;
+    list-style: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    span {
+      text-transform: uppercase;
+      color: #bdbdbd;
+    }
+  }
+}
+
+div.list {
+  counter-reset: list-number;
+  text-align: justify;
+}
+/** Note that we can use counter-increment in :before psuedo element **/
+
+div.list div:before {
+  counter-increment: list-number;
+  content: counter(list-number);
+
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 35px;
+  height: 35px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  background-color: #f2994a;
+  border-radius: 6px;
+  color: #fff;
+  margin: 10px;
+}
+
+@media (max-width: 991px) {
+  .recipe-time {
+    flex-flow: row wrap;
+  }
+  .row {
+    flex-direction: column-reverse;
+  }
+}
