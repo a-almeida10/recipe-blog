@@ -35,9 +35,18 @@ body {
     list-style: none;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
+    margin-top: 12px;
+
+    div {
+      text-align: center;
+    }
     span {
       text-transform: uppercase;
       color: #bdbdbd;
+      align-self: center;
+    }
+    .servings {
+      color: #f2994a;
     }
   }
 }
@@ -64,6 +73,19 @@ div.list div:before {
   border-radius: 6px;
   color: #fff;
   margin: 10px;
+}
+
+footer {
+  color: #333333;
+  a {
+    text-decoration: none;
+    color: #f2994a;
+    &:hover {
+      text-decoration: underline;
+      font-weight: 700;
+      color: #f2994a;
+    }
+  }
 }
 
 @media (max-width: 991px) {
